@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# The zed target dir grows pretty quickly, and Rust Analyzer
+# seems to do better when the project is cleaned frequently.
+#
+# This script checks for any rust updates, pulls down the latest
+# main branch, cleans the project, and builds it when run.
+#
+# I run this as a cron job to keep my zed project up to date
+#
+# Basically just add this to your crontab:
+# 0 3 * * * /bin/bash ~/automations/clean_and_build_zed.sh
+#
+# I keep all my automation scripts in a directory called `automations`,
+# but you can put this wherever you like, just adjust the path and scrupt
+# as needed.
+
 # Create or ensure the logs directory exists
 mkdir -p ~/automations/logs
 
