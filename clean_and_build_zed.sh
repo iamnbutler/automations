@@ -5,7 +5,7 @@ mkdir -p ~/automations/logs
 
 # Capture date and time for the log filename
 LOG_DATE=$(date "+%Y-%m-%d_%H-%M-%S")
-LOG_FILE=~/automations/logs/update_${LOG_DATE}.log
+LOG_FILE=~/automations/logs/clean_and_build_zed_${LOG_DATE}.log
 
 echo "Starting update process, logging to $LOG_FILE"
 
